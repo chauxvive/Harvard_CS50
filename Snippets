@@ -1,0 +1,18 @@
+//These are specifically exercises that are not part of the CS50 labs, things that come up in class, etc. Show your Work, is what I say! 
+
+//Assignment: 
+//A simple problem getting us familiar with C.
+//Make a code that asks a name, age, and phone, and then prints it back to the user.
+
+#include <cs50.h>
+#include <stdio.h>
+
+int main (void)
+{
+	string name = get_string("Name: \n");
+	string age = get_string("Age: \n");
+	string phone = get_string("phone : \n");
+
+	printf("Name: %s\n Age: %s\n Phone %s\n", name, age, phone);
+
+}
