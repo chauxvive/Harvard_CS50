@@ -1,0 +1,42 @@
+
+//Lab 1 problem set:
+
+
+#include <cs50.h>
+#include <stdio.h>
+
+int main (void)
+{
+// ask for a starting value
+
+int start;
+do {
+    start = get_int("Starting Value: \n");
+}
+while (start < 9);
+
+//ask for an end value
+
+int end;
+do {
+    end = get_int("Ending value: \n");
+}
+while (start > end);
+
+//calculate how many years
+    int years = 0;
+    int population = start;
+    while (population < end)
+    {
+        int births = population / 3;
+        int deaths = population / 4;
+        population += births - deaths;
+        years++;
+    }
+
+//print number of years to get to end value
+printf("Number of years: %i\n", years);
+
+return 0;
+
+}
